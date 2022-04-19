@@ -9,7 +9,7 @@ import SignupPage from "./Pages/SignupPage";
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(true);
+  const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(false);
 
   return (
     <Router>

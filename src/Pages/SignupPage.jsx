@@ -2,9 +2,10 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom';
 import './SignupPage.css'
 import { createUserWithEmailAndPassword } from "@firebase/auth";
+import { auth } from "../firebase";
 
 function SignupPage() {
-  const history = useHistory('')
+  const history = useHistory("");
 
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -13,10 +14,13 @@ function SignupPage() {
     e.preventDefault();
 
     // Sign In user using Firebase Email and Password Authentication
-    createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
         // db.collection
         history.push("/");
+        console.log("====================================");
+        console.log(userCredential);
+        console.log("====================================");
       })
       .catch((e) => {
         if (
@@ -39,12 +43,13 @@ function SignupPage() {
 
     setEmail("");
     setPassword("");
-  }
+  };
   return (
     <div className="container">
       <div className="container__right">
         <div className="right__form_container">
-          <form onSubmit={handleSignup}
+          <form
+            onSubmit={handleSignup}
             className="login__form"
             id="signupForm"
             autoCapitalize="off"
@@ -72,7 +77,7 @@ function SignupPage() {
           </form>
           <div className="divider"></div>
           <div className="create__account">
-            <Link to='/login'>Login</Link>
+            <Link to="/login">Login</Link>
           </div>
         </div>
       </div>

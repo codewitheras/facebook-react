@@ -1,7 +1,8 @@
 import React from "react";
 import "./LoginPage.css";
 import { Link, useHistory } from "react-router-dom";
-import { signInWithEmailAndPassword } from "@firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 function LoginPage() {
   const history = useHistory("");
@@ -13,31 +14,41 @@ function LoginPage() {
     e.preventDefault();
 
     // Sign In user using Firebase Email and Password Authentication
-    signInWithEmailAndPassword(email, password)
-      .then((auth) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+
+        const user = userCredential.user;
+        console.log("====================================");
+        console.log(user);
+        console.log("====================================");
         history.push("/");
       })
       .catch((e) => {
-        if (
-          e.message ===
-          "The password is invalid or the user does not have a password"
-        ) {
-          // Will use a Toast Component to display any warning or notification
-          alert("Please check your credentials again.");
-        } else if (
-          e.message ===
-          "There is no user corresponding to this identifier. The user may have been deleted."
-        ) {
-          // Will use a Toast Component to display any warning or notification
-          alert(e.message);
-        }
-      });
-    
-    console.log(email);
-    console.log(password);
+        // if (
+        //   e.message ===
+        //   "The password is invalid or the user does not have a password"
+        // ) {
+        //   Will use a Toast Component to display any warning or notification
+        //   alert("Please check your credentials again.");
+        // } else if (
+        //   e.message ===
+        //   "There is no user corresponding to this identifier. The user may have been deleted."
+        // ) {
+        //   Will use a Toast Component to display any warning or notification
+        //   alert(e.message);
+        // }
 
-    setEmail('')
-    setPassword('')
+        console.log("====================================");
+        console.log(e.message);
+        console.log("====================================");
+      });
+
+    // console.log(email);
+    // console.log(password);
+
+    setEmail("");
+    setPassword("");
   };
 
   return (

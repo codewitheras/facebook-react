@@ -1,19 +1,14 @@
 import React from "react";
 import "./Header.css";
-import {NavLink} from 'react-router-dom'
 
 function Header() {
-  
   return (
     <header>
-      <div class="logo">
+      <div className="logo">
         <a href="mainpage.html">
-          <img
-            src=""
-            alt=""
-          />
+          <img src="" alt="" />
         </a>
-        <div class="search_wrapper">
+        <div className="search_wrapper">
           <input
             type="text"
             name="search"
