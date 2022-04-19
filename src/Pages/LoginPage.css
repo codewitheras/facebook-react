@@ -1,0 +1,141 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 180px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container__left {
+  width: 100%;
+}
+
+.container__title {
+  font-size: 55px;
+  font-family: "Franklin Gothic Medium", sans-serif;
+  color: var(--facebook-blue-100);
+  margin-bottom: 10px;
+}
+
+.container__tag {
+  font-size: 28px;
+  max-width: 460px;
+}
+
+/* Login Form Container */
+.container__right {
+  width: 100%;
+  padding: 20px 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container__right .right__form_container {
+  padding: 30px 25px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: var(--light-box-shadow);
+  margin-bottom: 20px;
+}
+
+.container__right .right__form_container,
+.login__form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 380px;
+}
+
+.login__form input {
+  width: 100%;
+  height: 45px;
+  padding: 5px 8px;
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.login__form input:focus {
+  outline: 2px solid var(--facebook-blue-100);
+  border: 0;
+}
+
+.login__form button {
+  width: 100%;
+  height: 45px;
+  background-color: var(--facebook-blue-100);
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25 ease-in-out;
+}
+
+.login__form button:hover {
+  background-color: var(--facebook-blue-500);
+  transition: all 0.25s ease-in-out;
+}
+
+.login__form .forgot__psd {
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.forgot__psd a {
+  text-decoration: none;
+  color: var(--facebook-blue-100);
+}
+
+.forgot__psd a:hover {
+  text-decoration: underline;
+}
+
+.right__form_container .divider {
+  width: 100%;
+  color: black;
+  height: 1px;
+}
+
+.right__form_container .create__account {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create__account a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  height: 45px;
+  background-color: #28a10a;
+  border-radius: 5px;
+  width: 70%;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.25s ease-in-out;
+}
+
+.create__account a:hover {
+  transition: all 0.25s ease-in-out;
+  background-color: var(--facebook-green-500);
+}
+
+.container__right p {
+  font-size: 14px;
+}

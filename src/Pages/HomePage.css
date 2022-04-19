@@ -1,0 +1,11 @@
+.grid {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  gap: 15px;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}

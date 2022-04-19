@@ -1,0 +1,83 @@
+@import url('../App.css');
+
+.sidebar {
+  width: 25%;
+  padding: 0 20px;
+}
+
+.sidebar .sidebar__links {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar .sidebar__links a {
+  width: 100%;
+  padding: 9px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 530;
+  color: black;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.sidebar .sidebar__links a h4 {
+  color: rgb(27, 27, 27);
+  font-weight: 400;
+  /* padding-left: 10px; */
+}
+
+.sidebar .sidebar__links a h4 i {
+  padding-right: 5px;
+}
+
+.sidebar a:hover {
+  background-color: rgba(221, 221, 221, 0.397);
+}
+
+.grid .grid .sidebar,
+.grid .options {
+  overflow-y: scroll;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.grid .post__section::-webkit-scrollbar,
+.grid .sidebar::-webkit-scrollbar,
+.grid .options::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.post__section {
+  width: 50%;
+  max-width: 85%;
+  overflow-y: scroll;
+  /* background-color: red; */
+}
+
+.grid .post__section > div {
+  width: 100%;
+  /* background-color: pink; */
+  max-width: 85%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.grid .post__section > p,
+.grid .post__section > a {
+  text-overflow: ellipsis;
+}
+
+.grid .post__section::-webkit-scrollbar {
+  visibility: hidden;
+}

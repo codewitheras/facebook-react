@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --light-box-shadow: 1px 2px 15px 2px rgba(0, 0, 0, 0.068);
+  --facebook-blue-500: #0c62cc;
+  --facebook-blue-100: #2083f8;
+  --facebook-green-100: #19d95e;
+  --facebook-green-500: #1f8106;
+  --main-white: #fff;
+  --main-bg: rgba(119, 119, 119, 0.829);
+}
+
+.app {
+  background-color: rgba(223, 223, 240, 0.452);
+}
+
+/* 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
