@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { auth } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 // Component Imports
 import HomePage from "./Pages/HomePage";
@@ -11,18 +13,27 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(false);
 
+  React.useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const userId = user.uid;
+        console.log(userId);
+      }
+    });
+  });
+
   return (
     <Router>
-      <div className="app">
+      <div className='app'>
         <Switch>
           {/* {!isUserLoggedIn ? <LoginPage /> : <HomePage />} */}
           <Route
-            path="/"
+            path='/'
             exact
-            component={!isUserLoggedIn ? LoginPage : HomePage }
+            component={!isUserLoggedIn ? LoginPage : HomePage}
           />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/signup" component={SignupPage} />
+          <Route path='/login' component={LoginPage} />
+          <Route path='/signup' component={SignupPage} />
         </Switch>
       </div>
     </Router>

@@ -1,6 +1,8 @@
+
 .grid {
   width: 100%;
   height: calc(100vh - 60px);
+  /* height: 100vh; */
   display: flex;
   flex-direction: row;
   padding-top: 15px;
@@ -8,4 +10,8 @@
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.grid > .main {
+  margin-top: 60px;
 }

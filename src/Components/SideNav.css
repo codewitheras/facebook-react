@@ -1,5 +1,3 @@
-@import url('../App.css');
-
 .sidebar {
   width: 25%;
   padding: 0 20px;
@@ -39,8 +37,8 @@
   background-color: rgba(221, 221, 221, 0.397);
 }
 
-.grid .grid .sidebar,
-.grid .options {
+.sidebar,
+.options {
   overflow-y: scroll;
   padding: 10px;
   display: flex;
@@ -49,9 +47,9 @@
   flex-direction: column;
 }
 
-.grid .post__section::-webkit-scrollbar,
-.grid .sidebar::-webkit-scrollbar,
-.grid .options::-webkit-scrollbar {
+.post__section::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar,
+.options::-webkit-scrollbar {
   visibility: hidden;
 }
 
@@ -62,7 +60,7 @@
   /* background-color: red; */
 }
 
-.grid .post__section > div {
+.post__section > div {
   width: 100%;
   /* background-color: pink; */
   max-width: 85%;
@@ -73,11 +71,11 @@
   flex-direction: column;
 }
 
-.grid .post__section > p,
-.grid .post__section > a {
+.post__section > p,
+.post__section > a {
   text-overflow: ellipsis;
 }
 
-.grid .post__section::-webkit-scrollbar {
+.post__section::-webkit-scrollbar {
   visibility: hidden;
 }

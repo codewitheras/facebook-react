@@ -1,0 +1,153 @@
+.modal {
+  display: none;
+}
+
+.modal.show {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal .modal__post_form {
+  /* margin-top: -40px; */
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  padding: 25px 25px;
+}
+
+.modal__post_form .modal__post_hd {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__post_form .modal__post_hd .hidden {
+  visibility: hidden;
+}
+
+.modal__post_form .modal__post_hd #closePostModal {
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  background: transparent;
+}
+
+.modal__post_hd #closePostModal:hover {
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgba(221, 221, 221, 0.39);
+}
+
+.post__user_info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.post__user_info a img {
+  height: 30px;
+  width: 30px;
+}
+
+.post__user_info a {
+  font-size: 15px;
+  color: rgb(27, 27, 27);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.post__user_info a:visited {
+  color: rgb(27, 27, 27);
+}
+
+.modal__post_form form #postBox {
+  width: 100%;
+  border: 1px solid rgba(221, 221, 221, 0.418);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  outline: 0;
+  padding: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgb(19, 19, 19);
+}
+
+.modal__post_form form textarea::-webkit-resizer {
+  resize: none;
+  cursor: none;
+}
+
+.post__options {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.post__options h4 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.post__options_items {
+  margin: 10px 0;
+}
+
+.post {
+  width: 100%;
+}
+
+.post button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 3px;
+}
+
+.post button:hover {
+  background-color: rgb(10, 116, 223);
+}
+
+.modal__post_form form .image__preview {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 2px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.modal__post_form form .image__preview img {
+  height: 70px;
+  width: 70px;
+}

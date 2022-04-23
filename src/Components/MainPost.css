@@ -1,0 +1,108 @@
+/* Post Card */
+.post__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.post__section .create__post_form {
+  width: 100%;
+  padding: 10px 0;
+  max-width: 550px;
+  border-radius: 7px;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px 5px rgba(197, 197, 197, 0.144);
+  margin-bottom: 20px;
+}
+
+.create__post_form form {
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.create__post_form form .form__hd {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(247, 245, 245, 0.411);
+  margin-top: 12px;
+}
+
+.form__hd a img {
+  height: 35px;
+  width: 35px;
+}
+
+.form__hd button {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  border-radius: 50px;
+  background-color: #bdc4cc3d;
+  text-align: left;
+  padding: 0 15px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.582);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+form .option__tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.option__tags button {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.733);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option__tags button i {
+  padding-right: 7px;
+}
+
+.option__tags button:hover,
+.action__btns button:hover {
+  background-color: rgba(231, 231, 231, 0.384);
+}
+
+.option__tags button:nth-child(1) {
+  color: red;
+}
+
+.option__tags button:nth-child(2) {
+  color: rgb(0, 168, 0);
+}
+
+.option__tags button:last-child {
+  color: rgba(224, 224, 6, 0.911);
+}
