@@ -1,0 +1,28 @@
+.toast__wrapper {
+  width: 300px;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  font-weight: 500;
+  right: 30px;
+  animation: slide 0.5s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+    margin: 0;
+  }
+
+  50% {
+    transform: translateX(100%);
+    margin: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    margin: 0;
+  }
+}
